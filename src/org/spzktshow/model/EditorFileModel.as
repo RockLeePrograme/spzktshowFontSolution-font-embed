@@ -4,10 +4,11 @@ package org.spzktshow.model
 	import org.spzktshow.core.editor.IEditorFile;
 	import org.spzktshow.core.editor.IEditorFileNewFileStructure;
 	import org.spzktshow.core.editor.IEditorFileOpenStructure;
+	import org.spzktshow.core.editor.IEditorFileOperation;
 	import org.spzktshow.core.editor.IEditorFileSaveAsStructure;
 	import org.spzktshow.core.editor.IEditorFileSaveStructure;
 	
-	public class EditorFileModel extends Actor implements IEditorFile
+	public class EditorFileModel extends Actor implements IEditorFileOperation
 	{
 		public function EditorFileModel()
 		{
@@ -26,10 +27,17 @@ package org.spzktshow.model
 		
 		public function save(value:IEditorFileSaveStructure):void
 		{
+			
 		}
 		
 		public function saveAs(value:IEditorFileSaveAsStructure):void
 		{
+			
+		}
+		
+		public function pushFileList(value:IEditorFile):void
+		{
+			
 		}
 	}
 }
