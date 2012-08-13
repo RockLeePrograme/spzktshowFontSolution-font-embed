@@ -1,4 +1,4 @@
-package org.spzktshow.core.multiLanguage
+package org.spzktshow.core.dataStructure.multiLanguage
 {
 	public interface IMultiLanguage
 	{

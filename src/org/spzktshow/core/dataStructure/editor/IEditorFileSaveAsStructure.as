@@ -1,4 +1,4 @@
-package org.spzktshow.core.editor
+package org.spzktshow.core.dataStructure.editor
 {
 	public interface IEditorFileSaveAsStructure
 	{

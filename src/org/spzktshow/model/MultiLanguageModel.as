@@ -1,11 +1,11 @@
 package org.spzktshow.model
 {
 	import org.robotlegs.mvcs.Actor;
-	import org.spzktshow.core.multiLanguage.IMultiLanguageConfig;
-	import org.spzktshow.core.multiLanguage.IMultiLanguage;
-	import org.spzktshow.core.multiLanguage.IMultiLanguageElement;
-	import org.spzktshow.core.multiLanguage.IMultiLanguageMark;
-	import org.spzktshow.core.multiLanguage.MultiLanguageFactory;
+	import org.spzktshow.core.dataStructure.multiLanguage.IMultiLanguageConfig;
+	import org.spzktshow.core.dataStructure.multiLanguage.IMultiLanguage;
+	import org.spzktshow.core.dataStructure.multiLanguage.IMultiLanguageElement;
+	import org.spzktshow.core.dataStructure.multiLanguage.IMultiLanguageMark;
+	import org.spzktshow.core.dataStructure.multiLanguage.MultiLanguageFactory;
 	
 	public class MultiLanguageModel extends Actor
 	{
@@ -83,7 +83,7 @@ package org.spzktshow.model
 		 * @return 
 		 * 
 		 */		
-		protected function checkMultiLanguageConfigHasLanguage(multiLanguageConfig:IMultiLanguageConfig, multiLanguage:IMultiLanguage):int
+		private function checkMultiLanguageConfigHasLanguage(multiLanguageConfig:IMultiLanguageConfig, multiLanguage:IMultiLanguage):int
 		{
 			var i:int = -1;
 			for each (var temp:IMultiLanguage in multiLanguageConfig.languageList)
@@ -103,7 +103,7 @@ package org.spzktshow.model
 		 * @return 
 		 * 
 		 */		
-		protected function checkMultiLanguageConfigHasMark(multiLanguageConfig:IMultiLanguageConfig, multiLanguageMark:IMultiLanguageMark):int
+		private function checkMultiLanguageConfigHasMark(multiLanguageConfig:IMultiLanguageConfig, multiLanguageMark:IMultiLanguageMark):int
 		{
 			var i:int = -1;
 			for each (var temp:IMultiLanguageMark in multiLanguageConfig.markList)

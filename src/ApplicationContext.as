@@ -4,7 +4,11 @@ package
 	import flash.display.Stage;
 	
 	import org.robotlegs.mvcs.Context;
+	import org.spzktshow.view.mediator.FileNameProfileMediator;
+	import org.spzktshow.view.mediator.FontEmbedMenuBarMediator;
 	import org.spzktshow.view.mediator.MainViewMediator;
+	import org.spzktshow.view.ui.FileNameProfilePanel;
+	import org.spzktshow.view.ui.FontEmbedMenuBar;
 	
 	public class ApplicationContext extends Context
 	{
@@ -37,6 +41,8 @@ package
 		protected function registerView():void
 		{
 			this.mediatorMap.mapView(Main, MainViewMediator);
+			this.mediatorMap.mapView(FontEmbedMenuBar, FontEmbedMenuBarMediator);
+			this.mediatorMap.mapView(FileNameProfilePanel, FileNameProfileMediator);
 		}
 		
 		public static var stage:Stage;
