@@ -7,6 +7,8 @@
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
+			import org.spzktshow.core.aop.ui.CloseProxy;
+			import org.spzktshow.core.aop.ui.OpenProxy;
 			import org.spzktshow.view.ui.event.FileNameProfilePanelEvent;
 			
 			protected function onButtonClickHandler(event:MouseEvent):void
@@ -16,6 +18,8 @@
 				var fileNameProfilePanelEvent:FileNameProfilePanelEvent = new FileNameProfilePanelEvent(FileNameProfilePanelEvent.CREATE_FILE_NAME, true);
 				fileNameProfilePanelEvent.fileName = fileNameInput.text;
 				this.dispatchEvent(fileNameProfilePanelEvent);
+				
+				this.close();
 			}
 			
 			
@@ -26,6 +30,18 @@
 					return false;
 				}
 				return true;
+			}
+			
+			private function close():void
+			{
+				var closeProxy:CloseProxy = new CloseProxy;
+				closeProxy.close(this);
+			}
+			
+			private function open():void
+			{
+				var openProxy:OpenProxy = new OpenProxy;
+				openProxy.open(this);
 			}
 		]]>
 	</fx:Script>

@@ -19,7 +19,10 @@ package org.spzktshow.controller.command
 		
 		override public function execute():void
 		{
-			
+			if(event.type == EditorFileEvent.NEW_FILE)
+			{
+				model.open(event.newFileStructure);
+			}
 		}
 	}
 }
